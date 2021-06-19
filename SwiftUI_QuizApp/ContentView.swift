@@ -15,11 +15,24 @@ struct ContentView: View {
     @State private var currentQuestion = 0
     @State private var correctAnswers = 0
     
-    var questions = [
-        Question(title: "What day of the week is it?", option1: "Monday", option2: "Saturday", option3: "Sunday", option4: "Wednesday"),
-        Question(title: "What does YJ eat?", option1: "Broccoli", option2: "Nutella", option3: "Rice", option4: "MacBooks"),
-        Question(title: "Did Jia Chen sleep last night?", option1: "Yes", option2: "No", option3: "Yes but I needed another answer", option4: "Yes?")
-    ]
+    var questions = [Question(title: "What day is it?",
+                                  option1: "Monday",
+                                  option2: "Friday",
+                                  option3: "Wednesday",
+                                  option4: "Saturday",
+                                  correctOption: 4),
+                         Question(title: "What framework are we using?",
+                                  option1: "UIKit",
+                                  option2: "SwiftUI",
+                                  option3: "React Native",
+                                  option4: "Flutter",
+                                  correctOption: 2),
+                         Question(title: "Which company created Swift?",
+                                  option1: "Apple",
+                                  option2: "Orange",
+                                  option3: "Google",
+                                  option4: "Tinkercademy",
+                                  correctOption: 1)]
     
     var body: some View {
         VStack{
@@ -56,7 +69,7 @@ struct ContentView: View {
     }
     
     func didTapOption(_ optionNumber: Int) {
-        if optionNumber == 2 {
+        if optionNumber == questions[currentQuestion].correctOption {
             print("Correct!")
             isCorrect = true
             correctAnswers += 1
