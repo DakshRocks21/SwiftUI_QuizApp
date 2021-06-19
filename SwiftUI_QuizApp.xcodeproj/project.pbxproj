@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5736F3267D9E72005F1B7E /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5736F2267D9E72005F1B7E /* CircularProgressView.swift */; };
 		FE4A35BC267737D60050A69F /* SwiftUI_QuizAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A35BB267737D60050A69F /* SwiftUI_QuizAppApp.swift */; };
 		FE4A35BE267737D60050A69F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A35BD267737D60050A69F /* ContentView.swift */; };
 		FE4A35C0267737D80050A69F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4A35BF267737D80050A69F /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E5736F2267D9E72005F1B7E /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		FE4A35B8267737D60050A69F /* SwiftUI_QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4A35BB267737D60050A69F /* SwiftUI_QuizAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_QuizAppApp.swift; sourceTree = "<group>"; };
 		FE4A35BD267737D60050A69F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		FE4A35BA267737D60050A69F /* SwiftUI_QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E5736F2267D9E72005F1B7E /* CircularProgressView.swift */,
 				FE4A35BB267737D60050A69F /* SwiftUI_QuizAppApp.swift */,
 				FE4A35BD267737D60050A69F /* ContentView.swift */,
 				FE4A35CA267737E90050A69F /* ScoreView.swift */,
@@ -147,6 +150,7 @@
 				FE4A35BE267737D60050A69F /* ContentView.swift in Sources */,
 				FE4A35CD267737EF0050A69F /* Question.swift in Sources */,
 				FE4A35BC267737D60050A69F /* SwiftUI_QuizAppApp.swift in Sources */,
+				2E5736F3267D9E72005F1B7E /* CircularProgressView.swift in Sources */,
 				FE4A35CB267737E90050A69F /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

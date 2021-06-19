@@ -16,8 +16,13 @@ struct ScoreView: View {
         ZStack {
             Color.yellow
             VStack {
+                CircularProgressView(progress: CGFloat(score) / CGFloat(totalScore))
+                                .frame(width: 150, height: 150)
+                
                 Text("Your score was:")
                 Text("\(score)/\(totalScore)")
+                
+                
             }
         }
     }
