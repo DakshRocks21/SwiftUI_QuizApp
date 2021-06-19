@@ -15,13 +15,13 @@ struct ContentView: View {
     @State private var currentQuestion = 0
     @State private var correctAnswers = 0
     
-    var questions = [Question(title: "What day is it?",
+    var questions = [Question(title: "What day does 1 Jan 2000 fall on?",
                               option1: "Monday",
-                              option2: "Friday",
+                              option2: "Tuesday",
                               option3: "Wednesday",
-                              option4: "Saturday",
-                              correctOption: 4),
-                     Question(title: "What framework are we using?",
+                              option4: "Thursday",
+                              correctOption: 1),
+                     Question(title: "What framework is this made on?",
                               option1: "UIKit",
                               option2: "SwiftUI",
                               option3: "React Native",
@@ -90,7 +90,7 @@ struct ContentView: View {
             .padding()
         }
         .alert(isPresented: $isAlertPresented) {
-            Alert(title: Text(isCorrect ? "Well done!" : "Boooo wrong"),
+            Alert(title: Text(isCorrect ? "Well done!" : "Boooo you suck"),
                   message: Text(isCorrect ? "Congratulations 🎉" : "Try harder please 😔"),
                   dismissButton: .default(Text("OK")){
                     currentQuestion += 1
