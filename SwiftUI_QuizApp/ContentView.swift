@@ -16,23 +16,23 @@ struct ContentView: View {
     @State private var correctAnswers = 0
     
     var questions = [Question(title: "What day is it?",
-                                  option1: "Monday",
-                                  option2: "Friday",
-                                  option3: "Wednesday",
-                                  option4: "Saturday",
-                                  correctOption: 4),
-                         Question(title: "What framework are we using?",
-                                  option1: "UIKit",
-                                  option2: "SwiftUI",
-                                  option3: "React Native",
-                                  option4: "Flutter",
-                                  correctOption: 2),
-                         Question(title: "Which company created Swift?",
-                                  option1: "Apple",
-                                  option2: "Orange",
-                                  option3: "Google",
-                                  option4: "Tinkercademy",
-                                  correctOption: 1)]
+                              option1: "Monday",
+                              option2: "Friday",
+                              option3: "Wednesday",
+                              option4: "Saturday",
+                              correctOption: 4),
+                     Question(title: "What framework are we using?",
+                              option1: "UIKit",
+                              option2: "SwiftUI",
+                              option3: "React Native",
+                              option4: "Flutter",
+                              correctOption: 2),
+                     Question(title: "Which company created Swift?",
+                              option1: "Apple",
+                              option2: "Orange",
+                              option3: "Google",
+                              option4: "Tinkercademy",
+                              correctOption: 1)]
     
     var body: some View {
         VStack{
@@ -41,15 +41,38 @@ struct ContentView: View {
                 .padding()
             
             HStack {
-                VStack{
-                    Button(questions[currentQuestion].option1) { didTapOption(1) }
-                    Button(questions[currentQuestion].option2) { didTapOption(2) }
-                }
                 VStack {
-                    Button(questions[currentQuestion].option3) { didTapOption(3) }
-                    Button(questions[currentQuestion].option4) { didTapOption(4) }
+                    Button {
+                        didTapOption(1)
+                    } label: {
+                        Image(systemName: "triangle.fill")
+                        Text(questions[currentQuestion].option1)
+                    }
+                    Button {
+                        didTapOption(2)
+                    } label: {
+                        Image(systemName: "circle.fill")
+                        Text(questions[currentQuestion].option2)
+                    }
                 }
+                .padding()
+                VStack {
+                    Button {
+                        didTapOption(3)
+                    } label: {
+                        Image(systemName: "diamond.fill")
+                        Text(questions[currentQuestion].option3)
+                    }
+                    Button {
+                        didTapOption(4)
+                    } label: {
+                        Image(systemName: "square.fill")
+                        Text(questions[currentQuestion].option4)
+                    }
+                }
+                .padding()
             }
+            .padding()
         }
         .alert(isPresented: $isAlertPresented) {
             Alert(title: Text(isCorrect ? "Well done!" : "Boooo wrong"),
@@ -57,11 +80,11 @@ struct ContentView: View {
                   dismissButton: .default(Text("OK")){
                     currentQuestion += 1
                     if currentQuestion == questions.count {
-                        // We finished! Show the score sheet
+                        
                         currentQuestion = 0
                         isSheetPresented = true
                     }
-            })
+                  })
         }
         .sheet(isPresented: $isSheetPresented) {
             ScoreView(score: correctAnswers, totalScore: questions.count)
