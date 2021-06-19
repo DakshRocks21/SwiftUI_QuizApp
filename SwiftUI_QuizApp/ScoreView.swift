@@ -17,10 +17,12 @@ struct ScoreView: View {
             Color.yellow
             VStack {
                 CircularProgressView(progress: CGFloat(score) / CGFloat(totalScore))
-                                .frame(width: 150, height: 150)
-                
+                    .frame(width: 150, height: 150).padding()
                 Text("Your score was:")
                 Text("\(score)/\(totalScore)")
+                Image(score == totalScore ? "pro" : "noob")
+                           .resizable()
+                    .aspectRatio(contentMode: .fit)
                 
                 
             }

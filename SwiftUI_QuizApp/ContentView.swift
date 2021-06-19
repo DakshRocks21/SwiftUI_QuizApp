@@ -50,13 +50,15 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "triangle.fill")
                         Text(questions[currentQuestion].option1)
-                    }.background(Color.blue.opacity(0.5))
+                    }.padding()
+                    .background(Color.blue.opacity(0.5))
                     Button {
                         didTapOption(2)
                     } label: {
                         Image(systemName: "circle.fill")
                         Text(questions[currentQuestion].option2)
-                    }.background(Color.red.opacity(0.5))
+                    }.padding()
+                    .background(Color.red.opacity(0.5))
                 }
                 .padding()
                 VStack {
@@ -65,13 +67,15 @@ struct ContentView: View {
                     } label: {
                         Image(systemName: "diamond.fill")
                         Text(questions[currentQuestion].option3)
-                    }.background(Color.yellow.opacity(0.5))
+                    }.padding()
+                    .background(Color.yellow.opacity(0.5))
                     Button {
                         didTapOption(4)
                     } label: {
                         Image(systemName: "square.fill")
                         Text(questions[currentQuestion].option4)
-                    }.background(Color.green.opacity(0.5))
+                    }.padding()
+                    .background(Color.green.opacity(0.5))
                 }
                 .padding()
             }
