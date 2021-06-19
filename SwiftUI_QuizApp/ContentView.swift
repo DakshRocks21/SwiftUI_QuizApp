@@ -52,6 +52,8 @@ struct ContentView: View {
                         Text(questions[currentQuestion].option1)
                     }.padding()
                     .background(Color.blue.opacity(0.5))
+                    .cornerRadius(15)
+                    .animation(.spring(response: 2))
                     Button {
                         didTapOption(2)
                     } label: {
@@ -59,6 +61,8 @@ struct ContentView: View {
                         Text(questions[currentQuestion].option2)
                     }.padding()
                     .background(Color.red.opacity(0.5))
+                    .cornerRadius(15)
+                    .animation(.spring(response: 2))
                 }
                 .padding()
                 VStack {
@@ -69,6 +73,8 @@ struct ContentView: View {
                         Text(questions[currentQuestion].option3)
                     }.padding()
                     .background(Color.yellow.opacity(0.5))
+                    .cornerRadius(15)
+                    .animation(.spring(response: 2))
                     Button {
                         didTapOption(4)
                     } label: {
@@ -76,6 +82,8 @@ struct ContentView: View {
                         Text(questions[currentQuestion].option4)
                     }.padding()
                     .background(Color.green.opacity(0.5))
+                    .cornerRadius(15)
+                    .animation(.spring(response: 2))
                 }
                 .padding()
             }
